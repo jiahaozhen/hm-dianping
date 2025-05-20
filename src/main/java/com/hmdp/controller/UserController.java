@@ -52,7 +52,6 @@ public class UserController {
     @PostMapping("/login")
     public Result login(@RequestBody LoginFormDTO loginForm, HttpSession session){
         return userService.login(loginForm, session);
-//        return Result.fail("功能未完成");
     }
 
     /**
@@ -69,7 +68,6 @@ public class UserController {
         // 获取当前登录的用户并返回
         UserDTO user = UserHolder.getUser();
         return Result.ok(user);
-//        return Result.fail("功能未完成");
     }
 
     @GetMapping("/info/{id}")
